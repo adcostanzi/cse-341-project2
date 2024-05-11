@@ -1,18 +1,28 @@
 const express = require("express");
 const router = express.Router();
-//const validator = require("../validator");
-//const utilities = require("../utilities/utilities");
+const validator = require("../utilities/validator");
+const utilities = require("../utilities/utilities");
 
 const agentController = require("../controllers/agents");
 
-router.get("/", agentController.getAllAgents);
+router.get("/", utilities.handleErrors(agentController.getAllAgents));
 
-router.get("/:id", agentController.getSingleAgent);
+router.get("/:id", utilities.handleErrors(agentController.getSingleAgent));
 
-router.post("/", agentController.createAgent);
-/*
-router.put("/:id", agentController.updateAgent);
+router.post(
+  "/",
+  validator.agentValidator(),
+  validator.validateAgent,
+  utilities.handleErrors(agentController.createAgent)
+);
 
-router.delete("/:id", agentController.deleteAgent); */
+router.put(
+  "/:id",
+  validator.agentValidator(),
+  validator.validateAgent,
+  utilities.handleErrors(agentController.updateAgent)
+);
+
+router.delete("/:id", utilities.handleErrors(agentController.deleteAgent));
 
 module.exports = router;

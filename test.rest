@@ -15,32 +15,70 @@ POST http://localhost:3000/properties
 content-type: application/json
 
 {
-    "title": "Big Casa",
-    "description": "Costa no Brazil",
+    "title": "A very big house",
+    "description": "A very big house, very very big!",
     "address": "456789162346 456321 Fortaleza",
     "price": 155000,
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "square_footage": "2500"
+  }
+
+
+### Update property
+PUT http://localhost:3000/properties/663f1170ac91de0a25735972
+content-type: application/json
+
+{
+    "title": "Small Casa",
+    "description": "Mexico",
+    "address": "456789162346 456321 Fortaleza",
+    "price": "155000",
     "bedrooms": 2,
     "bathrooms": 1,
     "square_footage": 2500
   }
 
 
+### Delete property by id
+DELETE http://localhost:3000/properties/663c557a7b4685e126338d42
+
+
 ### Test locally get all agents
 GET http://localhost:3000/agents
 
 ### Test locally get agent by id
-GET http://localhost:3000/agents/663c55ca7b4685e126338d43
+GET http://localhost:3000/agents/663c55ca7b4685e126338d48
 
 
-### Upload property
+### Upload agent
 POST http://localhost:3000/agents
 content-type: application/json
 
 {
-    "name": "Mr Anderson",
-    "email": "andersonmatrix@example.com",
-    "phone_number": "987-654-3210",
+    "name": "Jacinto",
+    "email": "anderson@example.com",
+    "phone_number": "127-654-0210",
     "agency": "Matrix Realty Group",
     "license_number": "DDF67890",
     "specialty": "Residential Properties"
   }
+
+
+### Update agent
+PUT http://localhost:3000/agents/663f1a7237432ae24a95a1b2
+content-type: application/json
+
+{
+    "name": "Jonas Anderson",
+    "email": "andersonmatrix@example.com",
+    "phone_number": "987-654-3210",
+    "agency": "Matrixx Realty Group",
+    "license_number": "ADF67891",
+    "specialty": "Residential Properties"
+  }
+
+
+
+### Delete agent by id
+DELETE http://localhost:3000/agents/663f139d44fac19416767bb6

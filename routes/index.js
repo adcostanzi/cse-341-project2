@@ -3,7 +3,7 @@ const router = require("express").Router();
 router.use("/", require("./swagger"));
 
 router.get("/", (req, res) => {
-  // #swagger.tags=["Welcome to Project 2 for CSE341"]
+  // #swagger.tags=["Welcome"]
   res.send("Welcome to Project 2 for CSE341");
 });
 
