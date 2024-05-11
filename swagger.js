@@ -5,7 +5,7 @@ const doc = {
     title: "CSE341 - Project 2",
     description: "By Andres Costanzi",
   },
-  host: "cse-341-project2-7eud.onrender.com/",
+  host: "cse-341-project2-7eud.onrender.com",
   schemes: ["http", "https"],
 };
 
