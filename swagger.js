@@ -6,7 +6,7 @@ const doc = {
     description: "By Andres Costanzi",
   },
   host: "http://cse-341-project2-7eud.onrender.com/",
-  schemes: ["http", "https"],
+  schemes: ["https", "http"],
 };
 
 const outputFile = "./swagger.json";
