@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const validator = require("../utilities/validator");
 const utilities = require("../utilities/utilities");
+const auth = require("../utilities/authenticate");
 
 const propertyController = require("../controllers/properties");
 
@@ -14,6 +15,7 @@ router.get(
 
 router.post(
   "/",
+  auth.isAthenticated,
   validator.propertyValidator(),
   validator.validateProperty,
   utilities.handleErrors(propertyController.uploadProperty)
@@ -21,6 +23,7 @@ router.post(
 
 router.put(
   "/:id",
+  auth.isAthenticated,
   validator.propertyValidator(),
   validator.validateProperty,
   utilities.handleErrors(propertyController.updateProperty)
@@ -28,6 +31,7 @@ router.put(
 
 router.delete(
   "/:id",
+  auth.isAthenticated,
   utilities.handleErrors(propertyController.deleteProperty)
 );
 

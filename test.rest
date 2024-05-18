@@ -66,7 +66,7 @@ content-type: application/json
 
 
 ### Update agent
-PUT http://localhost:3000/agents/663f1a7237432ae24a95a1b2
+PUT http://localhost:3000/agents/663f1a1d67413f34ba48c9cf
 content-type: application/json
 
 {
