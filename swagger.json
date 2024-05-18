@@ -8,24 +8,10 @@
   "host": "cse-341-project2-7eud.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
-  
+    "http",
+    "https"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Welcome"
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/agents/": {
       "get": {
         "tags": [
@@ -78,9 +64,6 @@
         "responses": {
           "201": {
             "description": "Created"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"
@@ -163,9 +146,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"
@@ -253,9 +233,6 @@
         "responses": {
           "201": {
             "description": "Created"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
           }
         }
       }
@@ -338,9 +315,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"
